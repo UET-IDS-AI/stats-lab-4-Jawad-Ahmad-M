@@ -137,7 +137,7 @@ def exponential_probabilities():
     simulated_gt5 = np.sum(samples > 5) / len(samples)
     simulated_interval = np.sum((samples > 1) & (samples < 3)) / len(samples)
 
-    return analytic_gt5, analytic_interval, simulated_gt5, simulated_interval
+    return p_greater_5, _1_greater_x_less_3, simulated_gt5, simulated_interval
 
 # =========================================================
 # QUESTION 4 — Gaussian Distribution
