@@ -83,7 +83,7 @@ def pdf_validation_plot():
         return 2 * x * math.exp(-x**2)
 
     integral_value, error = quad(f, 0, np.inf)
-    is_valid_pdf = np.isclose(integral_value, 1, atol=1e-6)
+    is_valid_pdf = bool(np.isclose(integral_value, 1, atol=1e-6))
 
     x = np.linspace(0, 3, 300)       # 300 points between 0 and 3
     y = 2 * x * np.exp(-x**2)        # evaluate f(x) at each point
