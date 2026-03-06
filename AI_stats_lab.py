@@ -41,13 +41,13 @@ def cdf_probabilities():
 
     p_greater_5 = math.exp(-lambda_ * 5)
     p_less_5 = 1 - math.exp(-lambda_ * 5)
-    3_greater_p_less_7 = math.exp(-lambda_ * 3) - math.exp(-lambda_ * 7)
+    _3_greater_p_less_7 = math.exp(-lambda_ * 3) - math.exp(-lambda_ * 7)
 
     samples = np.random.exponential(scale = 1.0, size = 100000)
 
     p_greater_5_simulated = np.sum(samples > 5) / len(samples)
 
-    return p_greater_5, p_less_5, 3_greater_p_less_7, p_greater_5_simulated
+    return p_greater_5, p_less_5, _3_greater_p_less_7, p_greater_5_simulated
 
 
 # =========================================================
@@ -130,7 +130,7 @@ def exponential_probabilities():
     lambda_ = 1
 
     p_greater_5 = math.exp(-lambda_ * 5)
-    1_greater_x_less_3 =  math.exp(-lambda_ * 1) -  math.exp(-lambda_ * 3)
+    _1_greater_x_less_3 =  math.exp(-lambda_ * 1) -  math.exp(-lambda_ * 3)
 
     samples = np.random.exponential(scale = 1.0, size = 100000)
 
